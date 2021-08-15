@@ -1,5 +1,3 @@
-
-
 # Kingdom Hearts LUA Manager
  A program to easily (de-)activate LUA Scripts in realtime.
 
@@ -17,3 +15,7 @@
 5. Place your scripts in the desired folders
 6. Press the 'Reload scripts' button to show available scripts
 7. Everything else should be self-explanatory
+
+## Video preview
+
+https://user-images.githubusercontent.com/20326375/129488876-a5a4d0eb-4956-4c51-9717-236451af7ce8.mp4
