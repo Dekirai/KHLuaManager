@@ -3,8 +3,7 @@
 
 ## Requirements
 
- - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-offline-installer)
- - It uses .NET Framework 4.8 because .NET 5 currently is really buggy on my machine and makes it impossible to work with it.
+ - [.NET 5](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-5.0.9-windows-x64-installer)
  
 ## How to use the program
 

@@ -18,7 +18,7 @@ namespace KHLuaManager
             Directory.CreateDirectory(path + @"scripts\kh2\disabled");
             Directory.CreateDirectory(path + @"scripts\bbs\disabled");
         }
-        
+
         private void LoadKH1()
         {
             scriptBox.Items.Clear();
