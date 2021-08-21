@@ -23,60 +23,88 @@ namespace KHLuaManager
         {
             scriptBox.Items.Clear();
             DirectoryInfo d = new DirectoryInfo(path + @"\scripts\kh1");
-            FileInfo[] Files = d.GetFiles("*.lua");
-            foreach (FileInfo file in Files)
-                scriptBox.Items.Add(file.Name);
+            try
+            {
+                FileInfo[] Files = d.GetFiles("*.lua");
+                foreach (FileInfo file in Files)
+                    scriptBox.Items.Add(file.Name);
 
-            dscriptBox.Items.Clear();
-            DirectoryInfo dd = new DirectoryInfo(path + @"\scripts\kh1\disabled");
-            FileInfo[] Filesd = dd.GetFiles("*.lua");
-            foreach (FileInfo file in Filesd)
-                dscriptBox.Items.Add(file.Name);
+                dscriptBox.Items.Clear();
+                DirectoryInfo dd = new DirectoryInfo(path + @"\scripts\kh1\disabled");
+                FileInfo[] Filesd = dd.GetFiles("*.lua");
+                foreach (FileInfo file in Filesd)
+                    dscriptBox.Items.Add(file.Name);
+            }
+            catch
+            {
+
+            }
         }
 
         private void LoadKH2()
         {
             scriptBox.Items.Clear();
             DirectoryInfo d = new DirectoryInfo(path + @"\scripts\kh2");
-            FileInfo[] Files = d.GetFiles("*.lua");
-            foreach (FileInfo file in Files)
-                scriptBox.Items.Add(file.Name);
+            try
+            {
+                FileInfo[] Files = d.GetFiles("*.lua");
+                foreach (FileInfo file in Files)
+                    scriptBox.Items.Add(file.Name);
 
-            dscriptBox.Items.Clear();
-            DirectoryInfo dd = new DirectoryInfo(path + @"\scripts\kh2\disabled");
-            FileInfo[] Filesd = dd.GetFiles("*.lua");
-            foreach (FileInfo file in Filesd)
-                dscriptBox.Items.Add(file.Name);
+                dscriptBox.Items.Clear();
+                DirectoryInfo dd = new DirectoryInfo(path + @"\scripts\kh2\disabled");
+                FileInfo[] Filesd = dd.GetFiles("*.lua");
+                foreach (FileInfo file in Filesd)
+                    dscriptBox.Items.Add(file.Name);
+            }
+            catch
+            {
+
+            }
         }
 
         private void LoadKHCOM()
         {
             scriptBox.Items.Clear();
             DirectoryInfo d = new DirectoryInfo(path + @"\scripts\recom");
-            FileInfo[] Files = d.GetFiles("*.lua");
-            foreach (FileInfo file in Files)
-                scriptBox.Items.Add(file.Name);
+            try
+            {
+                FileInfo[] Files = d.GetFiles("*.lua");
+                foreach (FileInfo file in Files)
+                    scriptBox.Items.Add(file.Name);
 
-            dscriptBox.Items.Clear();
-            DirectoryInfo dd = new DirectoryInfo(path + @"\scripts\recom\disabled");
-            FileInfo[] Filesd = dd.GetFiles("*.lua");
-            foreach (FileInfo file in Filesd)
-                dscriptBox.Items.Add(file.Name);
+                dscriptBox.Items.Clear();
+                DirectoryInfo dd = new DirectoryInfo(path + @"\scripts\recom\disabled");
+                FileInfo[] Filesd = dd.GetFiles("*.lua");
+                foreach (FileInfo file in Filesd)
+                    dscriptBox.Items.Add(file.Name);
+            }
+            catch
+            {
+
+            }
         }
 
         private void LoadKHBBS()
         {
             scriptBox.Items.Clear();
             DirectoryInfo d = new DirectoryInfo(path + @"\scripts\bbs");
-            FileInfo[] Files = d.GetFiles("*.lua");
-            foreach (FileInfo file in Files)
-                scriptBox.Items.Add(file.Name);
+            try
+            {
+                FileInfo[] Files = d.GetFiles("*.lua");
+                foreach (FileInfo file in Files)
+                    scriptBox.Items.Add(file.Name);
 
-            dscriptBox.Items.Clear();
-            DirectoryInfo dd = new DirectoryInfo(path + @"\scripts\bbs\disabled");
-            FileInfo[] Filesd = dd.GetFiles("*.lua");
-            foreach (FileInfo file in Filesd)
-                dscriptBox.Items.Add(file.Name);
+                dscriptBox.Items.Clear();
+                DirectoryInfo dd = new DirectoryInfo(path + @"\scripts\bbs\disabled");
+                FileInfo[] Filesd = dd.GetFiles("*.lua");
+                foreach (FileInfo file in Filesd)
+                    dscriptBox.Items.Add(file.Name);
+            }
+            catch
+            {
+
+            }
         }
 
         private void gameList_SelectedIndexChanged(object sender, EventArgs e)
@@ -134,7 +162,8 @@ namespace KHLuaManager
 
         private void openFolder_Click(object sender, EventArgs e)
         {
-            Process.Start(path + @"\scripts");
+            var psi = new ProcessStartInfo() { FileName = path + @"\scripts", UseShellExecute = true };
+            Process.Start(psi);
         }
 
         private void reloadScripts_Click(object sender, EventArgs e)

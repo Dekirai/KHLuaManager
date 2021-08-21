@@ -60,6 +60,7 @@ namespace KHLuaManager
             // 
             // scriptBox
             // 
+            this.scriptBox.BackColor = System.Drawing.SystemColors.Control;
             this.scriptBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.scriptBox.FormattingEnabled = true;
             this.scriptBox.Location = new System.Drawing.Point(15, 58);
@@ -70,6 +71,7 @@ namespace KHLuaManager
             // 
             // dscriptBox
             // 
+            this.dscriptBox.BackColor = System.Drawing.SystemColors.Control;
             this.dscriptBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dscriptBox.FormattingEnabled = true;
             this.dscriptBox.Location = new System.Drawing.Point(283, 58);
@@ -177,7 +179,9 @@ namespace KHLuaManager
             this.Controls.Add(this.scriptBox);
             this.Controls.Add(this.gameList);
             this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "Kingdom Hearts LUA Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
