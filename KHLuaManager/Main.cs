@@ -176,13 +176,45 @@ namespace KHLuaManager
             if (scriptBox.SelectedItem != null)
             {
                 if (gameList.SelectedIndex == 0)
-                    Process.Start(path + $@"\scripts\kh1\" + scriptBox.SelectedItem.ToString());
+                {
+                    new Process
+                    {
+                        StartInfo = new ProcessStartInfo(path + $@"\scripts\kh1\" + scriptBox.SelectedItem.ToString())
+                        {
+                            UseShellExecute = true
+                        }
+                    }.Start();
+                }
                 else if (gameList.SelectedIndex == 1)
-                    Process.Start(path + $@"\scripts\kh2\" + scriptBox.SelectedItem.ToString());
+                {
+                    new Process
+                    {
+                        StartInfo = new ProcessStartInfo(path + $@"\scripts\kh2\" + scriptBox.SelectedItem.ToString())
+                        {
+                            UseShellExecute = true
+                        }
+                    }.Start();
+                }
                 else if (gameList.SelectedIndex == 2)
-                    Process.Start(path + $@"\scripts\recom\" + scriptBox.SelectedItem.ToString());
+                {
+                    new Process
+                    {
+                        StartInfo = new ProcessStartInfo(path + $@"\scripts\recom\" + scriptBox.SelectedItem.ToString())
+                        {
+                            UseShellExecute = true
+                        }
+                    }.Start();
+                }
                 else if (gameList.SelectedIndex == 3)
-                    Process.Start(path + $@"\scripts\bbs\" + scriptBox.SelectedItem.ToString());
+                {
+                    new Process
+                    {
+                        StartInfo = new ProcessStartInfo(path + $@"\scripts\bbs\" + scriptBox.SelectedItem.ToString())
+                        {
+                            UseShellExecute = true
+                        }
+                    }.Start();
+                }
             }
         }
 
@@ -190,14 +222,46 @@ namespace KHLuaManager
         {
             if (dscriptBox.SelectedItem != null)
             {
-                if (gameList.SelectedIndex == 0)
-                    Process.Start(path + $@"\scripts\kh1\disabled\" + dscriptBox.SelectedItem.ToString());
+                if (dscriptBox.SelectedIndex == 0)
+                {
+                    new Process
+                    {
+                        StartInfo = new ProcessStartInfo(path + $@"\scripts\kh1\disabled\" + dscriptBox.SelectedItem.ToString())
+                        {
+                            UseShellExecute = true
+                        }
+                    }.Start();
+                }
                 else if (gameList.SelectedIndex == 1)
-                    Process.Start(path + $@"\scripts\kh2\disabled\" + dscriptBox.SelectedItem.ToString());
+                {
+                    new Process
+                    {
+                        StartInfo = new ProcessStartInfo(path + $@"\scripts\kh2\disabled\" + dscriptBox.SelectedItem.ToString())
+                        {
+                            UseShellExecute = true
+                        }
+                    }.Start();
+                }
                 else if (gameList.SelectedIndex == 2)
-                    Process.Start(path + $@"\scripts\recom\disabled\" + dscriptBox.SelectedItem.ToString());
+                {
+                    new Process
+                    {
+                        StartInfo = new ProcessStartInfo(path + $@"\scripts\recom\disabled\" + dscriptBox.SelectedItem.ToString())
+                        {
+                            UseShellExecute = true
+                        }
+                    }.Start();
+                }
                 else if (gameList.SelectedIndex == 3)
-                    Process.Start(path + $@"\scripts\bbs\disabled\" + dscriptBox.SelectedItem.ToString());
+                {
+                    new Process
+                    {
+                        StartInfo = new ProcessStartInfo(path + $@"\scripts\bbs\disabled\" + dscriptBox.SelectedItem.ToString())
+                        {
+                            UseShellExecute = true
+                        }
+                    }.Start();
+                }
             }
         }
 
