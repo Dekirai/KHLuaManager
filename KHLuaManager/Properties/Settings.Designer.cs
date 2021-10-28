@@ -34,5 +34,17 @@ namespace KHLuaManager.Properties {
                 this["lastgame"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gamepath {
+            get {
+                return ((string)(this["gamepath"]));
+            }
+            set {
+                this["gamepath"] = value;
+            }
+        }
     }
 }

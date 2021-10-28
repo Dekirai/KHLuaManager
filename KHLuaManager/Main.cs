@@ -13,6 +13,7 @@ namespace KHLuaManager
         {
             InitializeComponent();
             gameList.SelectedIndex = Settings.Default.lastgame;
+            kh_path.Text = Settings.Default.gamepath;
             Directory.CreateDirectory(path + @"scripts\kh1\disabled");
             Directory.CreateDirectory(path + @"scripts\recom\disabled");
             Directory.CreateDirectory(path + @"scripts\kh2\disabled");
@@ -267,13 +268,76 @@ namespace KHLuaManager
 
         private void downloadLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/Sirius902/LuaBackend/releases");
+            
+            new Process
+            {
+                StartInfo = new ProcessStartInfo("https://github.com/Sirius902/LuaBackend/releases")
+                {
+                    UseShellExecute = true
+                }
+            }.Start();
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Settings.Default.lastgame = gameList.SelectedIndex;
+            Settings.Default.gamepath = kh_path.Text;
             Settings.Default.Save();
+        }
+
+        private void run_kh1_Click(object sender, EventArgs e)
+        {
+            new Process
+            {
+                StartInfo = new ProcessStartInfo( $@"{kh_path.Text}\KINGDOM HEARTS FINAL MIX.exe")
+                {
+                    UseShellExecute = true
+                }
+            }.Start();
+        }
+
+        private void run_kh2_Click(object sender, EventArgs e)
+        {
+            new Process
+            {
+                StartInfo = new ProcessStartInfo($@"{kh_path.Text}\KINGDOM HEARTS II FINAL MIX.exe")
+                {
+                    UseShellExecute = true
+                }
+            }.Start();
+        }
+
+        private void run_com_Click(object sender, EventArgs e)
+        {
+            new Process
+            {
+                StartInfo = new ProcessStartInfo($@"{kh_path.Text}\KINGDOM HEARTS Re_Chain of Memories.exe")
+                {
+                    UseShellExecute = true
+                }
+            }.Start();
+        }
+
+        private void run_bbs_Click(object sender, EventArgs e)
+        {
+            new Process
+            {
+                StartInfo = new ProcessStartInfo($@"{kh_path.Text}\KINGDOM HEARTS Birth by Sleep FINAL MIX.exe")
+                {
+                    UseShellExecute = true
+                }
+            }.Start();
+        }
+
+        private void run_khlauncher_Click(object sender, EventArgs e)
+        {
+            new Process
+            {
+                StartInfo = new ProcessStartInfo($@"{kh_path.Text}\KINGDOM HEARTS HD 1.5+2.5 ReMIX.exe")
+                {
+                    UseShellExecute = true
+                }
+            }.Start();
         }
     }
 }
