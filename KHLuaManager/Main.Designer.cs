@@ -41,14 +41,13 @@ namespace KHLuaManager
             this.reloadScripts = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.downloadLink = new System.Windows.Forms.LinkLabel();
-            this.kh_path = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.run_kh1 = new System.Windows.Forms.Button();
             this.run_kh2 = new System.Windows.Forms.Button();
             this.run_com = new System.Windows.Forms.Button();
             this.run_bbs = new System.Windows.Forms.Button();
             this.run_khlauncher = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.set_khpath = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gameList
@@ -170,25 +169,9 @@ namespace KHLuaManager
             this.downloadLink.Text = "Download";
             this.downloadLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.downloadLink_LinkClicked);
             // 
-            // kh_path
-            // 
-            this.kh_path.Location = new System.Drawing.Point(15, 513);
-            this.kh_path.Name = "kh_path";
-            this.kh_path.Size = new System.Drawing.Size(221, 20);
-            this.kh_path.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 497);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "KH Path (Where all .exe\'s are stored)";
-            // 
             // run_kh1
             // 
-            this.run_kh1.Location = new System.Drawing.Point(242, 511);
+            this.run_kh1.Location = new System.Drawing.Point(242, 490);
             this.run_kh1.Name = "run_kh1";
             this.run_kh1.Size = new System.Drawing.Size(62, 23);
             this.run_kh1.TabIndex = 13;
@@ -198,7 +181,7 @@ namespace KHLuaManager
             // 
             // run_kh2
             // 
-            this.run_kh2.Location = new System.Drawing.Point(310, 511);
+            this.run_kh2.Location = new System.Drawing.Point(310, 490);
             this.run_kh2.Name = "run_kh2";
             this.run_kh2.Size = new System.Drawing.Size(62, 23);
             this.run_kh2.TabIndex = 14;
@@ -208,7 +191,7 @@ namespace KHLuaManager
             // 
             // run_com
             // 
-            this.run_com.Location = new System.Drawing.Point(378, 511);
+            this.run_com.Location = new System.Drawing.Point(378, 490);
             this.run_com.Name = "run_com";
             this.run_com.Size = new System.Drawing.Size(62, 23);
             this.run_com.TabIndex = 15;
@@ -218,7 +201,7 @@ namespace KHLuaManager
             // 
             // run_bbs
             // 
-            this.run_bbs.Location = new System.Drawing.Point(446, 511);
+            this.run_bbs.Location = new System.Drawing.Point(446, 490);
             this.run_bbs.Name = "run_bbs";
             this.run_bbs.Size = new System.Drawing.Size(62, 23);
             this.run_bbs.TabIndex = 16;
@@ -228,7 +211,7 @@ namespace KHLuaManager
             // 
             // run_khlauncher
             // 
-            this.run_khlauncher.Location = new System.Drawing.Point(242, 540);
+            this.run_khlauncher.Location = new System.Drawing.Point(242, 519);
             this.run_khlauncher.Name = "run_khlauncher";
             this.run_khlauncher.Size = new System.Drawing.Size(266, 31);
             this.run_khlauncher.TabIndex = 17;
@@ -238,26 +221,35 @@ namespace KHLuaManager
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(12, 540);
+            this.label5.Location = new System.Drawing.Point(12, 516);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(229, 49);
             this.label5.TabIndex = 18;
             this.label5.Text = "Running a game without the launcher only works for the pirated version of the gam" +
     "e.";
             // 
+            // set_khpath
+            // 
+            this.set_khpath.Location = new System.Drawing.Point(15, 490);
+            this.set_khpath.Name = "set_khpath";
+            this.set_khpath.Size = new System.Drawing.Size(221, 23);
+            this.set_khpath.TabIndex = 19;
+            this.set_khpath.Text = "Set game Path";
+            this.set_khpath.UseVisualStyleBackColor = true;
+            this.set_khpath.Click += new System.EventHandler(this.set_khpath_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 583);
+            this.ClientSize = new System.Drawing.Size(516, 563);
+            this.Controls.Add(this.set_khpath);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.run_khlauncher);
             this.Controls.Add(this.run_bbs);
             this.Controls.Add(this.run_com);
             this.Controls.Add(this.run_kh2);
             this.Controls.Add(this.run_kh1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.kh_path);
             this.Controls.Add(this.downloadLink);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.reloadScripts);
@@ -294,14 +286,13 @@ namespace KHLuaManager
         private System.Windows.Forms.Button reloadScripts;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel downloadLink;
-        private System.Windows.Forms.TextBox kh_path;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button run_kh1;
         private System.Windows.Forms.Button run_kh2;
         private System.Windows.Forms.Button run_com;
         private System.Windows.Forms.Button run_bbs;
         private System.Windows.Forms.Button run_khlauncher;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button set_khpath;
     }
 }
 
