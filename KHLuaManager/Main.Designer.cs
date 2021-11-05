@@ -48,6 +48,8 @@ namespace KHLuaManager
             this.run_khlauncher = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.set_khpath = new System.Windows.Forms.Button();
+            this.auto_reload_scripts = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gameList
@@ -143,9 +145,9 @@ namespace KHLuaManager
             // 
             this.reloadScripts.Location = new System.Drawing.Point(15, 448);
             this.reloadScripts.Name = "reloadScripts";
-            this.reloadScripts.Size = new System.Drawing.Size(489, 23);
+            this.reloadScripts.Size = new System.Drawing.Size(226, 23);
             this.reloadScripts.TabIndex = 8;
-            this.reloadScripts.Text = "Reload Scripts";
+            this.reloadScripts.Text = "Reload files";
             this.reloadScripts.UseVisualStyleBackColor = true;
             this.reloadScripts.Click += new System.EventHandler(this.reloadScripts_Click);
             // 
@@ -238,11 +240,33 @@ namespace KHLuaManager
             this.set_khpath.UseVisualStyleBackColor = true;
             this.set_khpath.Click += new System.EventHandler(this.set_khpath_Click);
             // 
+            // auto_reload_scripts
+            // 
+            this.auto_reload_scripts.AutoSize = true;
+            this.auto_reload_scripts.Location = new System.Drawing.Point(280, 452);
+            this.auto_reload_scripts.Name = "auto_reload_scripts";
+            this.auto_reload_scripts.Size = new System.Drawing.Size(230, 17);
+            this.auto_reload_scripts.TabIndex = 20;
+            this.auto_reload_scripts.Text = "*Auto-Reload Scripts in LuaBackend";
+            this.auto_reload_scripts.UseVisualStyleBackColor = true;
+            this.auto_reload_scripts.CheckedChanged += new System.EventHandler(this.auto_reload_scripts_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(242, 553);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(266, 27);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "*If you move a script it will automatically press F1. So you don\'t have to manual" +
+    "ly reload the scripts.";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 563);
+            this.ClientSize = new System.Drawing.Size(516, 589);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.auto_reload_scripts);
             this.Controls.Add(this.set_khpath);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.run_khlauncher);
@@ -293,6 +317,8 @@ namespace KHLuaManager
         private System.Windows.Forms.Button run_khlauncher;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button set_khpath;
+        private System.Windows.Forms.CheckBox auto_reload_scripts;
+        private System.Windows.Forms.Label label4;
     }
 }
 

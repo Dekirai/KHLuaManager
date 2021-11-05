@@ -13,6 +13,7 @@ namespace KHLuaManager
         {
             InitializeComponent();
             gameList.SelectedIndex = Settings.Default.lastgame;
+            auto_reload_scripts.Checked = Settings.Default.autoreload;
             Directory.CreateDirectory(path + @"scripts\kh1\disabled");
             Directory.CreateDirectory(path + @"scripts\recom\disabled");
             Directory.CreateDirectory(path + @"scripts\kh2\disabled");
@@ -142,6 +143,7 @@ namespace KHLuaManager
             else
                 MessageBox.Show("Invalid game");
             Reload();
+            SendKeys.SendWait("{F1}");
         }
 
         private void removescript_Click(object sender, EventArgs e)
@@ -158,6 +160,7 @@ namespace KHLuaManager
             else if (gameList.SelectedIndex == 3)
                 File.Move(path + $@"\scripts\bbs\{item}", path + $@"\scripts\bbs\disabled\{item}");
             Reload();
+            SendKeys.SendWait("{F1}");
         }
 
         private void openFolder_Click(object sender, EventArgs e)
@@ -348,6 +351,20 @@ namespace KHLuaManager
                 Settings.Default.gamepath = fbd.SelectedPath;
                 Settings.Default.Save();
                 MessageBox.Show("Path has been set.");
+            }
+        }
+
+        private void auto_reload_scripts_CheckedChanged(object sender, EventArgs e)
+        {
+            if (auto_reload_scripts.Checked)
+            {
+                Settings.Default.autoreload = auto_reload_scripts.Checked;
+                Settings.Default.Save();
+            }
+            else
+            {
+                Settings.Default.autoreload = auto_reload_scripts.Checked;
+                Settings.Default.Save();
             }
         }
     }

@@ -46,5 +46,17 @@ namespace KHLuaManager.Properties {
                 this["gamepath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool autoreload {
+            get {
+                return ((bool)(this["autoreload"]));
+            }
+            set {
+                this["autoreload"] = value;
+            }
+        }
     }
 }
