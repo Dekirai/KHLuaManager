@@ -255,7 +255,7 @@ namespace KHLuaManager
             // 
             this.label4.Location = new System.Drawing.Point(242, 553);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(266, 27);
+            this.label4.Size = new System.Drawing.Size(266, 44);
             this.label4.TabIndex = 21;
             this.label4.Text = "*If you move a script it will automatically press F1. So you don\'t have to manual" +
     "ly reload the scripts.";
@@ -264,7 +264,7 @@ namespace KHLuaManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 589);
+            this.ClientSize = new System.Drawing.Size(516, 599);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.auto_reload_scripts);
             this.Controls.Add(this.set_khpath);
