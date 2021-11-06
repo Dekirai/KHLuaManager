@@ -21,8 +21,12 @@
 - Modify scripts by double-clicking the .lua file in the program
 - Quick launch the games/launcher
 - Auto-Reload Scripts after enabling or disabling a script (If LuaBackend is active)
+- Supports Kingdom Hearts, Kingdom Hearts II, Kingdom Hearts Re:Chain of Memories and Kingdom Hearts: Birth by Sleep
 
 ## To-Do
 
 - Add feature to delete scripts
 - No other ideas yet
+
+## Preview
+![Preview](https://i.imgur.com/evKrgtr.png)
