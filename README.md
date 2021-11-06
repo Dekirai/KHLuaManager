@@ -11,10 +11,18 @@
 2. Put the .exe anywhere
 3. Run it
 4. The program will generate some folders in Documents > Kingdom Hearts 1.5+2.5 ReMIX if they don't exist
-5. Place your scripts in the desired folders
-6. Press the 'Reload scripts' button to show available scripts
-7. Everything else should be self-explanatory
+5. Click on "Open script folder" and place your scripts in the game's folder
+6. Everything else should be self-explanatory (I hope)
 
-## Video preview
+## Features
 
-https://user-images.githubusercontent.com/20326375/129488876-a5a4d0eb-4956-4c51-9717-236451af7ce8.mp4
+- Easily enable and disable scripts
+- Open the script folder with one click
+- Modify scripts by double-clicking the .lua file in the program
+- Quick launch the games/launcher
+- Auto-Reload Scripts after enabling or disabling a script (If LuaBackend is active)
+
+## To-Do
+
+- Add feature to delete scripts
+- No other ideas yet
