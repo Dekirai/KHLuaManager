@@ -7,6 +7,8 @@
  
 ## How to use the program
 
+A video can be found here: [Kingdom Hearts - LUA Manager Preview](https://youtu.be/ImiXCcoiHNg)
+
 1. Download the latest version from Releases: [Click here](https://github.com/Dekirai/KHLuaManager/releases)
 2. Put the .exe anywhere
 3. Run it
@@ -31,4 +33,3 @@
 
 ## Preview
 ![Preview](https://i.imgur.com/evKrgtr.png)![Preview2](https://i.imgur.com/YrSV844.gif)
-![Preview3](https://youtu.be/ImiXCcoiHNg)
