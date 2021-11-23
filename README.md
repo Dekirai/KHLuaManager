@@ -31,3 +31,4 @@
 
 ## Preview
 ![Preview](https://i.imgur.com/evKrgtr.png)
+![Preview2](https://i.imgur.com/YrSV844.gif)
