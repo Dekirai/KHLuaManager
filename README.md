@@ -25,8 +25,7 @@
 
 ## To-Do
 
-- Add feature to delete scripts
-- No other ideas yet
+- Nothing for now
 
 ## Preview
 ![Preview](https://i.imgur.com/evKrgtr.png)
