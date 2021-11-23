@@ -29,9 +29,12 @@ namespace KHLuaManager
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.gameList = new System.Windows.Forms.ComboBox();
             this.scriptBox = new System.Windows.Forms.ListBox();
+            this.scriptContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.scriptDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.dscriptBox = new System.Windows.Forms.ListBox();
             this.removescript = new System.Windows.Forms.Button();
             this.addscript = new System.Windows.Forms.Button();
@@ -50,6 +53,10 @@ namespace KHLuaManager
             this.set_khpath = new System.Windows.Forms.Button();
             this.auto_reload_scripts = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dscriptContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dscriptDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.scriptContext.SuspendLayout();
+            this.dscriptContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // gameList
@@ -69,24 +76,46 @@ namespace KHLuaManager
             // 
             // scriptBox
             // 
+            this.scriptBox.AllowDrop = true;
             this.scriptBox.BackColor = System.Drawing.SystemColors.Control;
+            this.scriptBox.ContextMenuStrip = this.scriptContext;
             this.scriptBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.scriptBox.FormattingEnabled = true;
             this.scriptBox.Location = new System.Drawing.Point(15, 58);
             this.scriptBox.Name = "scriptBox";
             this.scriptBox.Size = new System.Drawing.Size(221, 355);
             this.scriptBox.TabIndex = 1;
+            this.scriptBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.scriptBox_DragDrop);
+            this.scriptBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.scriptBox_DragEnter);
             this.scriptBox.DoubleClick += new System.EventHandler(this.scriptBox_DoubleClick);
+            // 
+            // scriptContext
+            // 
+            this.scriptContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scriptDelete});
+            this.scriptContext.Name = "scriptContext";
+            this.scriptContext.Size = new System.Drawing.Size(140, 26);
+            // 
+            // scriptDelete
+            // 
+            this.scriptDelete.Name = "scriptDelete";
+            this.scriptDelete.Size = new System.Drawing.Size(139, 22);
+            this.scriptDelete.Text = "Delete script";
+            this.scriptDelete.Click += new System.EventHandler(this.scriptDelete_Click);
             // 
             // dscriptBox
             // 
+            this.dscriptBox.AllowDrop = true;
             this.dscriptBox.BackColor = System.Drawing.SystemColors.Control;
+            this.dscriptBox.ContextMenuStrip = this.dscriptContext;
             this.dscriptBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dscriptBox.FormattingEnabled = true;
             this.dscriptBox.Location = new System.Drawing.Point(283, 58);
             this.dscriptBox.Name = "dscriptBox";
             this.dscriptBox.Size = new System.Drawing.Size(221, 355);
             this.dscriptBox.TabIndex = 2;
+            this.dscriptBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.dscriptBox_DragDrop);
+            this.dscriptBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.dscriptBox_DragEnter);
             this.dscriptBox.DoubleClick += new System.EventHandler(this.dscriptBox_DoubleClick);
             // 
             // removescript
@@ -260,6 +289,20 @@ namespace KHLuaManager
             this.label4.Text = "*If you move a script it will automatically press F1. So you don\'t have to manual" +
     "ly reload the scripts.";
             // 
+            // dscriptContext
+            // 
+            this.dscriptContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dscriptDelete});
+            this.dscriptContext.Name = "dscriptContext";
+            this.dscriptContext.Size = new System.Drawing.Size(140, 26);
+            // 
+            // dscriptDelete
+            // 
+            this.dscriptDelete.Name = "dscriptDelete";
+            this.dscriptDelete.Size = new System.Drawing.Size(139, 22);
+            this.dscriptDelete.Text = "Delete script";
+            this.dscriptDelete.Click += new System.EventHandler(this.dscriptDelete_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +335,8 @@ namespace KHLuaManager
             this.Name = "Main";
             this.Text = "Kingdom Hearts LUA Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
+            this.scriptContext.ResumeLayout(false);
+            this.dscriptContext.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,6 +364,10 @@ namespace KHLuaManager
         private System.Windows.Forms.Button set_khpath;
         private System.Windows.Forms.CheckBox auto_reload_scripts;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ContextMenuStrip scriptContext;
+        private System.Windows.Forms.ToolStripMenuItem scriptDelete;
+        private System.Windows.Forms.ContextMenuStrip dscriptContext;
+        private System.Windows.Forms.ToolStripMenuItem dscriptDelete;
     }
 }
 

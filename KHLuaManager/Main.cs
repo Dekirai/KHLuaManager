@@ -367,5 +367,92 @@ namespace KHLuaManager
                 Settings.Default.Save();
             }
         }
+
+        private void scriptBox_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
+
+        }
+
+        private void scriptBox_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files)
+            {
+                string filename = Path.GetFileName(file);
+                if (gameList.SelectedIndex == 0)
+                    File.Move(file, path + $@"\scripts\kh1\{filename}");
+                else if (gameList.SelectedIndex == 1)
+                    File.Move(file, path + $@"\scripts\kh2\{filename}");
+                else if (gameList.SelectedIndex == 2)
+                    File.Move(file, path + $@"\scripts\recom\{filename}");
+                else if (gameList.SelectedIndex == 3)
+                    File.Move(file, path + $@"\scripts\bbs\{filename}");
+                Reload();
+            }
+        }
+
+        private void dscriptBox_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
+        }
+
+        private void dscriptBox_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files)
+            {
+                string filename = Path.GetFileName(file);
+                if (gameList.SelectedIndex == 0)
+                    File.Move(file, path + $@"\scripts\kh1\disabled\{filename}");
+                else if (gameList.SelectedIndex == 1)
+                    File.Move(file, path + $@"\scripts\kh2\disabled\{filename}");
+                else if (gameList.SelectedIndex == 2)
+                    File.Move(file, path + $@"\scripts\recom\disabled\{filename}");
+                else if (gameList.SelectedIndex == 3)
+                    File.Move(file, path + $@"\scripts\bbs\disabled\{filename}");
+                Reload();
+            }
+        }
+
+        private void scriptDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gameList.SelectedIndex == 0)
+                    File.Delete(path + $@"\scripts\kh1\{scriptBox.GetItemText(scriptBox.SelectedItem)}");
+                else if (gameList.SelectedIndex == 1)
+                    File.Delete(path + $@"\scripts\kh2\{scriptBox.GetItemText(scriptBox.SelectedItem)}");
+                else if (gameList.SelectedIndex == 2)
+                    File.Delete(path + $@"\scripts\recom\{scriptBox.GetItemText(scriptBox.SelectedItem)}");
+                else if (gameList.SelectedIndex == 3)
+                    File.Delete(path + $@"\scripts\bbs\{scriptBox.GetItemText(scriptBox.SelectedItem)}");
+                Reload();
+            }
+            catch
+            {
+                MessageBox.Show("You didn't select a file.");
+            }
+        }
+
+        private void dscriptDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gameList.SelectedIndex == 0)
+                    File.Delete(path + $@"\scripts\kh1\disabled\{dscriptBox.GetItemText(dscriptBox.SelectedItem)}");
+                else if (gameList.SelectedIndex == 1)
+                    File.Delete(path + $@"\scripts\kh2\disabled\{dscriptBox.GetItemText(dscriptBox.SelectedItem)}");
+                else if (gameList.SelectedIndex == 2)
+                    File.Delete(path + $@"\scripts\recom\disabled\{dscriptBox.GetItemText(dscriptBox.SelectedItem)}");
+                else if (gameList.SelectedIndex == 3)
+                    File.Delete(path + $@"\scripts\bbs\disabled\{dscriptBox.GetItemText(dscriptBox.SelectedItem)}");
+                Reload();
+            }
+            catch
+            {
+                MessageBox.Show("You didn't select a file.");
+            }
+        }
     }
 }
