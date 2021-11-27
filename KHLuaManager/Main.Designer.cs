@@ -36,6 +36,8 @@ namespace KHLuaManager
             this.scriptContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.scriptDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.dscriptBox = new System.Windows.Forms.ListBox();
+            this.dscriptContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dscriptDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.removescript = new System.Windows.Forms.Button();
             this.addscript = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,10 +53,6 @@ namespace KHLuaManager
             this.run_khlauncher = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.set_khpath = new System.Windows.Forms.Button();
-            this.auto_reload_scripts = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dscriptContext = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dscriptDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.scriptContext.SuspendLayout();
             this.dscriptContext.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +116,20 @@ namespace KHLuaManager
             this.dscriptBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.dscriptBox_DragEnter);
             this.dscriptBox.DoubleClick += new System.EventHandler(this.dscriptBox_DoubleClick);
             // 
+            // dscriptContext
+            // 
+            this.dscriptContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dscriptDelete});
+            this.dscriptContext.Name = "dscriptContext";
+            this.dscriptContext.Size = new System.Drawing.Size(140, 26);
+            // 
+            // dscriptDelete
+            // 
+            this.dscriptDelete.Name = "dscriptDelete";
+            this.dscriptDelete.Size = new System.Drawing.Size(139, 22);
+            this.dscriptDelete.Text = "Delete script";
+            this.dscriptDelete.Click += new System.EventHandler(this.dscriptDelete_Click);
+            // 
             // removescript
             // 
             this.removescript.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -174,7 +186,7 @@ namespace KHLuaManager
             // 
             this.reloadScripts.Location = new System.Drawing.Point(15, 448);
             this.reloadScripts.Name = "reloadScripts";
-            this.reloadScripts.Size = new System.Drawing.Size(226, 23);
+            this.reloadScripts.Size = new System.Drawing.Size(489, 23);
             this.reloadScripts.TabIndex = 8;
             this.reloadScripts.Text = "Reload files";
             this.reloadScripts.UseVisualStyleBackColor = true;
@@ -269,47 +281,11 @@ namespace KHLuaManager
             this.set_khpath.UseVisualStyleBackColor = true;
             this.set_khpath.Click += new System.EventHandler(this.set_khpath_Click);
             // 
-            // auto_reload_scripts
-            // 
-            this.auto_reload_scripts.AutoSize = true;
-            this.auto_reload_scripts.Location = new System.Drawing.Point(280, 452);
-            this.auto_reload_scripts.Name = "auto_reload_scripts";
-            this.auto_reload_scripts.Size = new System.Drawing.Size(230, 17);
-            this.auto_reload_scripts.TabIndex = 20;
-            this.auto_reload_scripts.Text = "*Auto-Reload Scripts in LuaBackend";
-            this.auto_reload_scripts.UseVisualStyleBackColor = true;
-            this.auto_reload_scripts.CheckedChanged += new System.EventHandler(this.auto_reload_scripts_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(242, 553);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(266, 44);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "*If you move a script it will automatically press F1. So you don\'t have to manual" +
-    "ly reload the scripts.";
-            // 
-            // dscriptContext
-            // 
-            this.dscriptContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dscriptDelete});
-            this.dscriptContext.Name = "dscriptContext";
-            this.dscriptContext.Size = new System.Drawing.Size(140, 26);
-            // 
-            // dscriptDelete
-            // 
-            this.dscriptDelete.Name = "dscriptDelete";
-            this.dscriptDelete.Size = new System.Drawing.Size(139, 22);
-            this.dscriptDelete.Text = "Delete script";
-            this.dscriptDelete.Click += new System.EventHandler(this.dscriptDelete_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 599);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.auto_reload_scripts);
+            this.ClientSize = new System.Drawing.Size(516, 561);
             this.Controls.Add(this.set_khpath);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.run_khlauncher);
@@ -362,8 +338,6 @@ namespace KHLuaManager
         private System.Windows.Forms.Button run_khlauncher;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button set_khpath;
-        private System.Windows.Forms.CheckBox auto_reload_scripts;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ContextMenuStrip scriptContext;
         private System.Windows.Forms.ToolStripMenuItem scriptDelete;
         private System.Windows.Forms.ContextMenuStrip dscriptContext;
