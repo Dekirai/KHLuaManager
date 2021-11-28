@@ -21,8 +21,7 @@ A video can be found here: [Kingdom Hearts - LUA Manager Preview](https://youtu.
 - Easily enable and disable scripts
 - Open the script folder with one click
 - Modify scripts by double-clicking the .lua file in the program
-- Quick launch the games/launcher
-- Auto-Reload Scripts after enabling or disabling a script (If LuaBackend is active)
+- Quick launch the games/launcher (Games only if you own the pirated version)
 - Supports Kingdom Hearts, Kingdom Hearts II, Kingdom Hearts Re:Chain of Memories and Kingdom Hearts: Birth by Sleep
 - Easily delete scripts by right-clicking the item and clicking on 'Delete script'
 - Drag and Drop files into the script box to add a new script with ease
