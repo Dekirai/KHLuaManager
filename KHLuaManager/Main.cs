@@ -17,6 +17,20 @@ namespace KHLuaManager
             Directory.CreateDirectory(path + @"scripts\recom\disabled");
             Directory.CreateDirectory(path + @"scripts\kh2\disabled");
             Directory.CreateDirectory(path + @"scripts\bbs\disabled");
+            CheckFiles();
+        }
+
+        private void CheckFiles()
+        {
+            if (File.Exists($@"{Settings.Default.gamepath}\CODEX64.dll") || Settings.Default.gamepath.Length > 5)
+            {
+                run_kh1.Enabled = true;
+                run_kh2.Enabled = true;
+                run_com.Enabled = true;
+                run_bbs.Enabled = true;
+            }
+            if (Settings.Default.gamepath.Length > 5)
+                run_khlauncher.Enabled = true;
         }
 
         private void LoadKH1()
@@ -289,7 +303,7 @@ namespace KHLuaManager
             {
                 StartInfo = new ProcessStartInfo( $@"{Settings.Default.gamepath}\KINGDOM HEARTS FINAL MIX.exe")
                 {
-                    UseShellExecute = true
+                    UseShellExecute = false
                 }
             }.Start();
         }
@@ -300,7 +314,7 @@ namespace KHLuaManager
             {
                 StartInfo = new ProcessStartInfo($@"{Settings.Default.gamepath}\KINGDOM HEARTS II FINAL MIX.exe")
                 {
-                    UseShellExecute = true
+                    UseShellExecute = false
                 }
             }.Start();
         }
@@ -311,7 +325,7 @@ namespace KHLuaManager
             {
                 StartInfo = new ProcessStartInfo($@"{Settings.Default.gamepath}\KINGDOM HEARTS Re_Chain of Memories.exe")
                 {
-                    UseShellExecute = true
+                    UseShellExecute = false
                 }
             }.Start();
         }
@@ -322,7 +336,7 @@ namespace KHLuaManager
             {
                 StartInfo = new ProcessStartInfo($@"{Settings.Default.gamepath}\KINGDOM HEARTS Birth by Sleep FINAL MIX.exe")
                 {
-                    UseShellExecute = true
+                    UseShellExecute = false
                 }
             }.Start();
         }
@@ -333,7 +347,7 @@ namespace KHLuaManager
             {
                 StartInfo = new ProcessStartInfo($@"{Settings.Default.gamepath}\KINGDOM HEARTS HD 1.5+2.5 ReMIX.exe")
                 {
-                    UseShellExecute = true
+                    UseShellExecute = false
                 }
             }.Start();
         }
@@ -348,6 +362,7 @@ namespace KHLuaManager
                 Settings.Default.gamepath = fbd.SelectedPath;
                 Settings.Default.Save();
                 MessageBox.Show("Path has been set.");
+                CheckFiles();
             }
         }
 

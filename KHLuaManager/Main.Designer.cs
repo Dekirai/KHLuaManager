@@ -214,6 +214,7 @@ namespace KHLuaManager
             // 
             // run_kh1
             // 
+            this.run_kh1.Enabled = false;
             this.run_kh1.Location = new System.Drawing.Point(242, 490);
             this.run_kh1.Name = "run_kh1";
             this.run_kh1.Size = new System.Drawing.Size(62, 23);
@@ -224,6 +225,7 @@ namespace KHLuaManager
             // 
             // run_kh2
             // 
+            this.run_kh2.Enabled = false;
             this.run_kh2.Location = new System.Drawing.Point(310, 490);
             this.run_kh2.Name = "run_kh2";
             this.run_kh2.Size = new System.Drawing.Size(62, 23);
@@ -234,6 +236,7 @@ namespace KHLuaManager
             // 
             // run_com
             // 
+            this.run_com.Enabled = false;
             this.run_com.Location = new System.Drawing.Point(378, 490);
             this.run_com.Name = "run_com";
             this.run_com.Size = new System.Drawing.Size(62, 23);
@@ -244,6 +247,7 @@ namespace KHLuaManager
             // 
             // run_bbs
             // 
+            this.run_bbs.Enabled = false;
             this.run_bbs.Location = new System.Drawing.Point(446, 490);
             this.run_bbs.Name = "run_bbs";
             this.run_bbs.Size = new System.Drawing.Size(62, 23);
@@ -254,6 +258,7 @@ namespace KHLuaManager
             // 
             // run_khlauncher
             // 
+            this.run_khlauncher.Enabled = false;
             this.run_khlauncher.Location = new System.Drawing.Point(242, 519);
             this.run_khlauncher.Name = "run_khlauncher";
             this.run_khlauncher.Size = new System.Drawing.Size(266, 31);
