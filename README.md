@@ -3,6 +3,7 @@
 
 ## Requirements
 
+ - [LuaBackend Hook by Sirius](https://github.com/Sirius902/LuaBackend)
  - [.NET 5](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-5.0.9-windows-x64-installer)
  
 ## How to use the program
