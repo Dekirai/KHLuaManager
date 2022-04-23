@@ -50,8 +50,6 @@ namespace KHLuaManager
             this.run_kh2 = new System.Windows.Forms.Button();
             this.run_com = new System.Windows.Forms.Button();
             this.run_bbs = new System.Windows.Forms.Button();
-            this.run_khlauncher = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.set_khpath = new System.Windows.Forms.Button();
             this.scriptContext.SuspendLayout();
             this.dscriptContext.SuspendLayout();
@@ -214,7 +212,6 @@ namespace KHLuaManager
             // 
             // run_kh1
             // 
-            this.run_kh1.Enabled = false;
             this.run_kh1.Location = new System.Drawing.Point(242, 490);
             this.run_kh1.Name = "run_kh1";
             this.run_kh1.Size = new System.Drawing.Size(62, 23);
@@ -225,7 +222,6 @@ namespace KHLuaManager
             // 
             // run_kh2
             // 
-            this.run_kh2.Enabled = false;
             this.run_kh2.Location = new System.Drawing.Point(310, 490);
             this.run_kh2.Name = "run_kh2";
             this.run_kh2.Size = new System.Drawing.Size(62, 23);
@@ -236,7 +232,6 @@ namespace KHLuaManager
             // 
             // run_com
             // 
-            this.run_com.Enabled = false;
             this.run_com.Location = new System.Drawing.Point(378, 490);
             this.run_com.Name = "run_com";
             this.run_com.Size = new System.Drawing.Size(62, 23);
@@ -247,7 +242,6 @@ namespace KHLuaManager
             // 
             // run_bbs
             // 
-            this.run_bbs.Enabled = false;
             this.run_bbs.Location = new System.Drawing.Point(446, 490);
             this.run_bbs.Name = "run_bbs";
             this.run_bbs.Size = new System.Drawing.Size(62, 23);
@@ -255,26 +249,6 @@ namespace KHLuaManager
             this.run_bbs.Text = "Run BBS";
             this.run_bbs.UseVisualStyleBackColor = true;
             this.run_bbs.Click += new System.EventHandler(this.run_bbs_Click);
-            // 
-            // run_khlauncher
-            // 
-            this.run_khlauncher.Enabled = false;
-            this.run_khlauncher.Location = new System.Drawing.Point(242, 519);
-            this.run_khlauncher.Name = "run_khlauncher";
-            this.run_khlauncher.Size = new System.Drawing.Size(266, 31);
-            this.run_khlauncher.TabIndex = 17;
-            this.run_khlauncher.Text = "Run KINGDOM HEARTS HD 1.5+2.5 Launcher";
-            this.run_khlauncher.UseVisualStyleBackColor = true;
-            this.run_khlauncher.Click += new System.EventHandler(this.run_khlauncher_Click);
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(12, 516);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(229, 49);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Running a game without the launcher only works for the pirated version of the gam" +
-    "e.";
             // 
             // set_khpath
             // 
@@ -290,10 +264,8 @@ namespace KHLuaManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 561);
+            this.ClientSize = new System.Drawing.Size(516, 520);
             this.Controls.Add(this.set_khpath);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.run_khlauncher);
             this.Controls.Add(this.run_bbs);
             this.Controls.Add(this.run_com);
             this.Controls.Add(this.run_kh2);
@@ -340,8 +312,6 @@ namespace KHLuaManager
         private System.Windows.Forms.Button run_kh2;
         private System.Windows.Forms.Button run_com;
         private System.Windows.Forms.Button run_bbs;
-        private System.Windows.Forms.Button run_khlauncher;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button set_khpath;
         private System.Windows.Forms.ContextMenuStrip scriptContext;
         private System.Windows.Forms.ToolStripMenuItem scriptDelete;

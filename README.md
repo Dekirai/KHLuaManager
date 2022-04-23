@@ -1,5 +1,6 @@
+
 # Kingdom Hearts LUA Manager
- A program to easily (de-)activate LUA Scripts in realtime.
+ A program to easily (de-)activate LUA Scripts in realtime.  
 
 ## Requirements
 
@@ -23,14 +24,10 @@ A video can be found here: [Kingdom Hearts - LUA Manager Preview](https://youtu.
 - Easily enable and disable scripts
 - Open the script folder with one click
 - Modify scripts by double-clicking the .lua file in the program
-- Quick launch the games/launcher (Games only if you own the pirated version)
+- Quick launch games **(ONLY ON PIRATED VERSION)**
 - Supports Kingdom Hearts, Kingdom Hearts II, Kingdom Hearts Re:Chain of Memories and Kingdom Hearts: Birth by Sleep
 - Easily delete scripts by right-clicking the item and clicking on 'Delete script'
 - Drag and Drop files into the script box to add a new script with ease
-
-## To-Do
-
-- Nothing for now
 
 ## Preview
 ![Preview](https://i.imgur.com/evKrgtr.png)![Preview2](https://i.imgur.com/YrSV844.gif)
